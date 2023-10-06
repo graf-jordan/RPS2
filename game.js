@@ -12,11 +12,12 @@ function getComputerChoice(){
     return compChoice;
 }
 
-function playGame(player, computer) {
+function playGame(player, computer, input) {
     console.log("test2");
     console.log(player);
     console.log(computer);
     let victor;
+    let score = player - computer;
     if (player - computer == 0) {
         victor = "Draw!";
     } else if (player + computer == 2) {
@@ -26,14 +27,23 @@ function playGame(player, computer) {
     } else if (player + computer == 1) {
         victor = "Rock wins!";
     }
+
     const showResult = document.querySelector("#result");
     result.textContent = victor;
+    counter(player, computer, input);
 }
 
 function getPlayerChoice(input, num) {
-    
+
     document.getElementById(input).setAttribute("style", "opacity:0.5");
     let compResult = getComputerChoice();
     console.log("test");
-    playGame(num, compResult);
+    playGame(num, compResult, input);
 } 
+
+function removeOpacity(player, computer) {
+
+}
+
+function counter(player, computer, input) {
+}
