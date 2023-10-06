@@ -12,14 +12,14 @@
 
         <div class="gameContainer">
             <div class="resultBox container">
-                <strong>COMPUTER SCORE:</strong>
-                <strong>PLAYER SCORE:</strong>
+                <strong id="computerScore">COMPUTER SCORE:</strong>
+                <strong id="playerScore">PLAYER SCORE:</strong>
             </div>
             <strong>YOUR ENEMY</strong>
         <div class="computer container">
-            <img src="images/rock.jpg" id="compRock">
-            <img src="images/paper.webp" id="compPaper">
-            <img src="images/scissors.webp" id="compScissors">
+            <img src="images/rock.jpg" id="compRock" class="gameIcons">
+            <img src="images/paper.webp" id="compPaper" class="gameIcons">
+            <img src="images/scissors.webp" id="compScissors" class="gameIcons">
         </div>
         <div class = scoreScreen>
             <strong id="result"></strong>
@@ -29,9 +29,9 @@
             <!--<img src="images/rock.jpg" class="rock">
             <img src="images/paper.webp" class="paper">
             <img src="images/scissors.webp" class="scissors"> -->
-            <button id="rock" onclick="getPlayerChoice('rock', 0)"><img src="images/rock.jpg" ></button>
-            <button id="paper" onclick="getPlayerChoice('paper', 2)"><img src="images/paper.webp"></button>
-            <button id="scissors" onclick="getPlayerChoice('scissors', 1)"><img src="images/scissors.webp"></button>
+            <button id="rock" class="gameIcons" onclick="getPlayerChoice('rock', 0)"><img src="images/rock.jpg" ></button>
+            <button id="paper" class="gameIcons" onclick="getPlayerChoice('paper', 2)"><img src="images/paper.webp"></button>
+            <button id="scissors" class="gameIcons" onclick="getPlayerChoice('scissors', 1)"><img src="images/scissors.webp"></button>
         </div>
     </div>
 </body>
