@@ -1,5 +1,7 @@
 let playerScore = 0;
 let computerScore = 0;
+let prevInputComputer = "style";
+let prevInputHuman = "style";
 
 function getComputerChoice(){
     let compChoice = Math.floor(Math.random()*3);
@@ -12,6 +14,7 @@ function getComputerChoice(){
         computerIcon = "compPaper";
     }
     setTransform(computerIcon);
+    prevInputComputer = computerIcon;
     return compChoice;
 }
 
@@ -42,6 +45,8 @@ function getPlayerChoice(input, num) {
     let compResult = getComputerChoice();
     setTransform(input);
    // console.log("test");
+    prevInputHuman = input;
+    removeTransform(prevInputHuman, input);
     playGame(num, compResult, input);
 } 
 function setTransform (toAdd) {
@@ -49,9 +54,11 @@ function setTransform (toAdd) {
     addMe.style.transform = "scale(1.5,1.5)";
 }
 
-function removeTransform(toRemove) {
-    let removeMe = document.getElementById(toRemove);
-    removeMe.style.transform = "initial";
+function removeTransform(toRemove, notRemove) {
+    if (toRemove != notRemove) {
+        removeMe = document.getElementById(toRemove);
+        removeMe.style.transform = "initial";
+    }
 }
 
 function counter(score, input) {
