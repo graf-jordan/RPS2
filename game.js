@@ -11,7 +11,7 @@ function getComputerChoice(){
     } else {
         computerIcon = "compPaper";
     }
-    document.getElementById(computerIcon).style.transform = "scale(1.5, 1.5)";
+    setTransform(computerIcon);
     return compChoice;
 }
 
@@ -38,17 +38,21 @@ function playGame(player, computer, input) {
 }
 
 function getPlayerChoice(input, num) {
-
-    document.getElementById(input).style.transform = "scale(1.5, 1.5)";
+    //document.getElementById(input).style.transform = "scale(1.5, 1.5)";
     let compResult = getComputerChoice();
-    removeTransform(input, compResult);
+    setTransform(input);
    // console.log("test");
     playGame(num, compResult, input);
 } 
+function setTransform (toAdd) {
+    let addMe = document.getElementById(toAdd);
+    addMe.style.transform = "scale(1.5,1.5)";
+}
 
-    function removeTransform(player, computer) {
-        document.getElementById(player).style.transform = "initial";
-    }
+function removeTransform(toRemove) {
+    let removeMe = document.getElementById(toRemove);
+    removeMe.style.transform = "initial";
+}
 
 function counter(score, input) {
     let result;
