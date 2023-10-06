@@ -30,6 +30,13 @@ button {
     align-items: center;
 }
 
+.scoreScreen {
+    display:flex;
+    justify-content: center;
+    width:200px;
+    height:200px;
+}
+
 .container {
     display:flex;
     gap:100px;
