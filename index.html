@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="game.js"></script>
 </head>
 <body>
     <h1>ROCK, PAPER, SCISSORS.</h1>
@@ -16,15 +17,18 @@
             </div>
             <strong>YOUR ENEMY</strong>
         <div class="computer container">
-            <img src="images/rock.jpg">
-            <img src="images/paper.webp" class="paper">
-            <img src="images/scissors.webp" class="scissors">
+            <img src="images/rock.jpg" class="icon">
+            <img src="images/paper.webp" class="icon">
+            <img src="images/scissors.webp" class="icon">
         </div>
         <strong>YOU</strong>
         <div class="player container">
-            <img src="images/rock.jpg">
+            <!--<img src="images/rock.jpg" class="rock">
             <img src="images/paper.webp" class="paper">
-            <img src="images/scissors.webp" class="scissors">
+            <img src="images/scissors.webp" class="scissors"> -->
+            <button id="rock" onclick="choose('rock')"><img src="images/rock.jpg" ></button>
+            <button id="paper" onclick="choose('paper')"><img src="images/paper.webp"></button>
+            <button id="scissors" onclick="choose('scissors')"><img src="images/scissors.webp"></button>
         </div>
     </div>
 </body>
