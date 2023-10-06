@@ -19,6 +19,13 @@ div img {
     background-color: white;
 }
 
+.resultBox {
+    display:flex;
+    width:20%;
+    height:50px;
+    justify-content: space-between;
+}
+
 button {
     background-color: rgb(202, 198, 198);
     border:none;
