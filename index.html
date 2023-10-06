@@ -17,18 +17,18 @@
             </div>
             <strong>YOUR ENEMY</strong>
         <div class="computer container">
-            <img src="images/rock.jpg" class="icon">
-            <img src="images/paper.webp" class="icon">
-            <img src="images/scissors.webp" class="icon">
+            <img src="images/rock.jpg" id="compRock">
+            <img src="images/paper.webp" id="compPaper">
+            <img src="images/scissors.webp" id="compScissors">
         </div>
         <strong>YOU</strong>
         <div class="player container">
             <!--<img src="images/rock.jpg" class="rock">
             <img src="images/paper.webp" class="paper">
             <img src="images/scissors.webp" class="scissors"> -->
-            <button id="rock" onclick="choose('rock')"><img src="images/rock.jpg" ></button>
-            <button id="paper" onclick="choose('paper')"><img src="images/paper.webp"></button>
-            <button id="scissors" onclick="choose('scissors')"><img src="images/scissors.webp"></button>
+            <button id="rock" onclick="getPlayerChoice('rock', 0)"><img src="images/rock.jpg" ></button>
+            <button id="paper" onclick="getPlayerChoice('paper', 1)"><img src="images/paper.webp"></button>
+            <button id="scissors" onclick="getPlayerChoice('scissors', 2)"><img src="images/scissors.webp"></button>
         </div>
     </div>
 </body>
