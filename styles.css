@@ -12,12 +12,16 @@ h1 {
 
 div img {
     width:100px;
-    height:auto;
+    height:140px;
     border:solid gray 2px;
     padding:4px;
     box-shadow: 6px 6px;
     background-color: white;
+}
 
+button {
+    background-color: rgb(202, 198, 198);
+    border:none;
 }
 
 .gameContainer {
